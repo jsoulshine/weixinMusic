@@ -1,0 +1,34 @@
+<!--pages/music/music.wxml-->
+<view>
+  <scroll-view scroll-y>
+  <audio class="music-wrap" poster="{{nowPlay.poster}}" name="{{nowPlay.name}}" author="{{nowPlay.author}}" src="{{nowPlay.src}}" id="myAudio" controls loop></audio>
+  <progress percent="80" show-info active />
+  <view wx:for="{{musicData}}">
+    <view class="music-list">
+      <view class="count">{{index}}</view>
+      <view class="detail" bindtap="chooseMusic" data-Id="{{item.song_id}}">
+        <view class="title">
+          <image style="width: 3.7rem; height: 4rem;" src="{{item.pic_small}}"></image>
+          <view class="message">
+            <view>
+              <text selectable class="name">{{item.album_title}}</text>
+            </view>
+            <view class="sub-detail">
+              <text selectable class="author">{{item.author}}</text>
+              <text selectable class="language">-{{item.language}}</text>
+            </view>            
+          </view>
+        </view>
+        <view class="iconfont icon-gengduo tool" catchtap="lookDetail"></view>
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+
+  
+
+  <!-- <button type="primary" bindtap="audioPlay">播放</button>
+  <button type="primary" bindtap="audioPause">暂停</button>
+  <button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+  <button type="primary" bindtap="audioStart">回到开头</button>  -->
+</view>

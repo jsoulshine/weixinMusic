@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/music/music"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "happy",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor":"#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"icons/home.png",
+        "selectedIconPath":"icons/home-selected.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "icons/log.png",
+        "selectedIconPath": "icons/log-selected.png"
+      },
+      {
+        "pagePath": "pages/music/music",
+        "text": "音乐",
+        "iconPath": "icons/music.png",
+        "selectedIconPath": "icons/music-selected.png"
+      }
+    ]
+  }
+}
